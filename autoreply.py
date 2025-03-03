@@ -61,6 +61,12 @@ def process_email(service, msg_id):
         print("[DEBUG] Email was not sent to m384973@datamond.ca, skipping.")
         return
 
+    if not to_address.startswith("mi"):
+        print(
+            f"[DEBUG] Email was not sent to an 'mi' address ({to_address}), skipping."
+        )
+    return
+
     has_attachment = any(
         part.get("filename") for part in msg["payload"].get("parts", [])
     )
