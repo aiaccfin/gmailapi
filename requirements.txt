@@ -233,10 +233,6 @@ streamlit-vertical-slider==2.5.5
 sympy==1.13.3
 tables==3.10.1
 tenacity==8.5.0
-tensorboard==2.17.1
-tensorboard-data-server==0.7.2
-tensorflow==2.17.0
-tensorflow-intel==2.17.0
 termcolor==2.4.0
 threadpoolctl==3.5.0
 tifffile==2025.2.18
