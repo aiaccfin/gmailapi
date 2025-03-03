@@ -57,15 +57,10 @@ def process_email(service, msg_id):
     print(f"[DEBUG] Original recipient (To): {to_address}")
 
     # Check if the email was originally sent to m384973@datamond.ca
-    if "m384973@datamond.ca" not in to_address:
-        print("[DEBUG] Email was not sent to m384973@datamond.ca, skipping.")
-        return
-
+    # if "m384973@datamond.ca" not in to_address:
     if not to_address.startswith("mi"):
-        print(
-            f"[DEBUG] Email was not sent to an 'mi' address ({to_address}), skipping."
-        )
-    return
+        print("[DEBUG] Email was not sent to mi*@datamond.ca, skipping.")
+        return
 
     has_attachment = any(
         part.get("filename") for part in msg["payload"].get("parts", [])
