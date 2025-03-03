@@ -67,9 +67,9 @@ def process_email(service, msg_id):
     )
     print(f"[DEBUG] Email has attachment: {has_attachment}")
 
-    response_body = "Hello Michael! "
+    response_body = "Hello Michael International! "
     response_body += (
-        "Your attachment is saved!" if has_attachment else "There is no attachment."
+        "Your attachment is saved if provided!" if has_attachment else "Good!"
     )
 
     send_reply(service, return_path, msg, response_body)
